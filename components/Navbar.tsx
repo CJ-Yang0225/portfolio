@@ -8,35 +8,48 @@ const pathNameByItem = {
   Projects: "/projects",
 };
 
-const Navbar = () => {
-  const [activeItem, setActiveItem] = useState("About");
-  const { pathname } = useRouter();
-  const inactiveItems = Object.keys(pathNameByItem).filter(
-    (item) => item !== activeItem
-  );
-  const itemsForDisplay = [activeItem].concat(inactiveItems);
+const items = Object.keys(pathNameByItem);
 
-  useEffect(() => {
-    setActiveItem(
-      Object.keys(pathNameByItem).find(
-        (item) => pathNameByItem[item] === pathname
-      )
-    );
-    console.log("useEffect");
-  }, []);
+const reorderItems = (items: string[], activeItem: string) => {
+  const isInactiveItem = (item: string) => item !== activeItem;
+  const inactiveItems = items.filter(isInactiveItem);
+  return [activeItem, ...inactiveItems];
+};
+
+const preventDefaultOn = (isPrevented: boolean) => (event: React.UIEvent) => {
+  if (isPrevented) {
+    event.preventDefault();
+  }
+};
+
+const Navbar = () => {
+  const router = useRouter();
+
+  const isActiveItem = (item: string) =>
+    pathNameByItem[item] === router.pathname;
+
+  const activeItem = items.find(isActiveItem);
+
+  const [itemsForDisplay, setItemsForDisplay] = useState(() =>
+    reorderItems(items, activeItem)
+  );
+
+  useEffect(
+    () => setItemsForDisplay((items) => reorderItems(items, activeItem)),
+    [activeItem]
+  );
 
   const renderItem = (item: string) => {
-    const activeItemClassList =
-      item === activeItem
-        ? "text-xl font-bold border-b-4 md:text-2xl text-green-400 border-green-400 mr-auto "
-        : "text-base font-normal md:text-xl mx-2 hover:text-green transition-all duration-300 ease-in-out";
+    const itemClassName = isActiveItem(item)
+      ? "text-xl font-bold border-b-4 md:text-2xl text-green-400 border-green-400 mr-auto"
+      : "text-base font-normal md:text-xl mx-2 hover:text-green transition-all duration-300 ease-in-out";
 
     return (
-      <Link key={item} href={pathNameByItem[item] || "/"}>
+      <Link key={item} href={pathNameByItem[item]}>
         <a
-          className={activeItemClassList}
+          className={itemClassName}
           children={item}
-          onClick={() => setActiveItem(item)}
+          onClick={preventDefaultOn(isActiveItem(item))}
         />
       </Link>
     );

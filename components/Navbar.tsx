@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+const activeItemClassName =
+  "text-xl font-bold border-b-4 md:text-2xl text-green-400 border-green-400 mr-auto";
+const inactiveItemClassName =
+  "text-base font-normal md:text-xl mx-2 hover:text-green transition-all duration-300 ease-in-out";
+
 const pathNameByItem = {
   About: "/",
   Resume: "/resume",
@@ -41,8 +46,8 @@ const Navbar = () => {
 
   const renderItem = (item: string) => {
     const itemClassName = isActiveItem(item)
-      ? "text-xl font-bold border-b-4 md:text-2xl text-green-400 border-green-400 mr-auto"
-      : "text-base font-normal md:text-xl mx-2 hover:text-green transition-all duration-300 ease-in-out";
+      ? activeItemClassName
+      : inactiveItemClassName;
 
     return (
       <Link key={item} href={pathNameByItem[item]}>

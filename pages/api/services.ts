@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { skills } from "../../data/skills";
+import { services } from "../../data/services";
 
 export default (req: NextApiRequest, res: NextApiResponse) => {
-  res.status(200).json({ skills });
+  res.status(200).json({ services: services });
 };

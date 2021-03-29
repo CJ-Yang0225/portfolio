@@ -4,33 +4,32 @@ import {
   GetStaticPropsContext,
 } from "next";
 import Head from "next/head";
-import SkillCard from "../components/SkillCard";
-import { skills } from "../data/skills";
+import ServiceCard from "../components/ServiceCard";
+import { services } from "../data/services";
 
-const index = (/* { skills } */) => {
-  // console.log("CLIENT", skills);
+const index = (/* { services } */) => {
+  // console.log("CLIENT", services);
   return (
     <div className="flex flex-col flex-grow px-6 pt-1">
       <section className="my-3 text-base font-medium">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni doloribus
-        earum ipsa veniam provident cumque nostrum adipisci, nobis quis, atque
-        maiores incidunt, ullam suscipit. Ullam error eveniet ducimus repellat
-        quos perspiciatis quasi ea voluptatem labore?
+        我是楊朝傑，我目前是中科大資工系四年級學生，學科成績優異，並熱衷於Front-End
+        和 App 開發。
+        <br />
+        我的個性謹慎、有條理，在團隊合作中能發揮協調能力。在學時間，我透過校內課程、
+        研究計畫、實習經驗及自主學習夯實自身程式設計及專案管理的能力，保持自身積極態度不斷累積專業。
       </section>
       <section
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100 rounded-b-2xl"
-        style={{ marginLeft: "-1.55rem", marginRight: "-1.55rem" }}
-      >
+        style={{ marginLeft: "-1.55rem", marginRight: "-1.55rem" }}>
         <h4 className="my-3 text-xl font-semibold tracking-wide">
           What I am doing
         </h4>
         <div className="grid gap-6 my-3 md:grid-cols-2">
-          {skills.map((skill) => (
+          {services.map((service) => (
             <article
               className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 lg:col-span-1"
-              key={skill.title}
-            >
-              <SkillCard skill={skill} />
+              key={service.title}>
+              <ServiceCard service={service} />
             </article>
           ))}
         </div>
@@ -45,26 +44,26 @@ export default index;
 // export const getServerSideProps = async (
 //   context: GetServerSidePropsContext
 // ) => {
-//   const res = await fetch("http://localhost:3000/api/skills");
+//   const res = await fetch("http://localhost:3000/api/services");
 //   const data = await res.json();
 
-//   console.log("SERVER", skills);
+//   console.log("SERVER", services);
 
 //   return {
 //     props: {
-//       skills: data.skills,
+//       services: data.services,
 //     },
 //   };
 // };
 
 /* npm run build 時呼叫一次 */
 // export const getStaticProps = async (context: GetStaticPropsContext) => {
-//   const res = await fetch("http://localhost:3000/api/skills");
+//   const res = await fetch("http://localhost:3000/api/services");
 //   const data = await res.json();
 
 //   return {
 //     props: {
-//       skills: data.skills,
+//       services: data.services,
 //     },
 //   };
 // };

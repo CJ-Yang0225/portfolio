@@ -1,11 +1,11 @@
 import React from "react";
-import { Skills } from "../data";
+import { Services } from "../data";
 
 type Props = {
-  skill: Skills;
+  service: Services;
 };
 
-const SkillCard: React.FC<Props> = ({ skill: { Icon, title, about } }) => {
+const ServiceCard: React.FC<Props> = ({ service: { Icon, title, about } }) => {
   return (
     <div className="flex items-center p-2 space-x-4">
       <Icon className="w-14 h-14 text-green" />
@@ -17,4 +17,4 @@ const SkillCard: React.FC<Props> = ({ skill: { Icon, title, about } }) => {
   );
 };
 
-export default SkillCard;
+export default ServiceCard;

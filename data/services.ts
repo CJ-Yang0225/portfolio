@@ -31,7 +31,7 @@ export const services: Services[] = [
     Icon: AiOutlineAntDesign,
     title: "UI/UX Designer",
     about:
-      "熟悉 <b>SCSS</b> 、 <b>BEM</b> 命名模式，常使用 <b>Styled Components</b>、<b>Material-UI</b> 設計畫面 ",
+      "熟悉 <b>SCSS</b> 、 <b>BEM</b> 命名模式，能使用 <b>Styled Components</b>、<b>Material-UI</b> 設計畫面 ",
   },
   {
     Icon: RiComputerLine,

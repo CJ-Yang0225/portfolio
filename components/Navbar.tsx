@@ -61,9 +61,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex items-center justify-end px-5 py-3 my-3">
+    <nav className="flex items-center justify-end px-5 py-3 my-3">
       {itemsForDisplay.map(renderItem)}
-    </div>
+    </nav>
   );
 };
 

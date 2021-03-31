@@ -10,7 +10,7 @@ import { services } from "../data/services";
 const index = (/* { services } */) => {
   // console.log("CLIENT", services);
   return (
-    <div className="flex flex-col flex-grow px-6 pt-1">
+    <main className="flex flex-col flex-grow px-6 pt-1">
       <section className="my-3 text-base font-medium">
         我是楊朝傑，我目前是中科大資工系四年級學生，學科成績優異，並熱衷於Front-End
         和 App 開發。
@@ -19,22 +19,22 @@ const index = (/* { services } */) => {
         研究計畫、實習經驗及自主學習夯實自身程式設計及專案管理的能力，保持自身積極態度不斷累積專業。
       </section>
       <section
-        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100 rounded-b-2xl"
-        style={{ marginLeft: "-1.55rem", marginRight: "-1.55rem" }}>
+        className="flex-grow p-4 mt-5 bg-gray-400"
+        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
         <h4 className="my-3 text-xl font-semibold tracking-wide">
           What I am doing
         </h4>
         <div className="grid gap-6 my-3 md:grid-cols-2">
           {services.map((service) => (
             <article
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 lg:col-span-1"
+              className="col-span-2 p-2 bg-gray-200 rounded-lg lg:col-span-1"
               key={service.title}>
               <ServiceCard service={service} />
             </article>
           ))}
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

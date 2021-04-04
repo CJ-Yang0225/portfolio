@@ -57,6 +57,11 @@ export const tools: Skills[] = [
   },
   {
     Icon: BsCircleFill,
+    name: "Express",
+    level: "50%",
+  },
+  {
+    Icon: BsCircleFill,
     name: "Tailwind",
     level: "60%",
   },

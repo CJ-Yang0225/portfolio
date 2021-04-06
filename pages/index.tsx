@@ -20,7 +20,8 @@ const index = (/* { services } */) => {
       </section>
       <section
         className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
-        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}>
+        style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
+      >
         <h4 className="my-3 text-xl font-semibold tracking-wide">
           What I am doing
         </h4>
@@ -28,7 +29,8 @@ const index = (/* { services } */) => {
           {services.map((service) => (
             <article
               className="col-span-2 p-2 bg-gray-200 rounded-lg dark:dark:bg-dark-300 dark:bg-dark-200 lg:col-span-1"
-              key={service.title}>
+              key={service.title}
+            >
               <ServiceCard service={service} />
             </article>
           ))}

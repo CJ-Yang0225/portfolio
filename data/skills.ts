@@ -1,5 +1,5 @@
 import { BsCircleFill } from "react-icons/bs";
-import { Skills } from ".";
+import { Skills } from "./types";
 
 export const languages: Skills[] = [
   {

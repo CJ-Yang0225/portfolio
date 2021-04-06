@@ -2,7 +2,7 @@ import { RiComputerLine } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
 import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
-import { Services } from ".";
+import { Services } from "./types";
 
 export const services: Services[] = [
   {
@@ -25,7 +25,8 @@ export const services: Services[] = [
   {
     Icon: MdDeveloperMode,
     title: "Android Development",
-    about: "有 Android Native 開發經驗，使用過 <b>Dagger</b>、<b>RxJava</b>和 <b>Retrofit</b> 等等 ",
+    about:
+      "有 Android Native 開發經驗，使用過 <b>Dagger</b>、<b>RxJava</b>和 <b>Retrofit</b> 等等 ",
   },
   {
     Icon: AiOutlineAntDesign,

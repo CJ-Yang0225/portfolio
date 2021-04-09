@@ -22,4 +22,4 @@ export type Projects = {
   key_techs: string[];
 };
 
-export type Category = "React" | "VanillaJS" | "GraphQL" | "Firebase";
+export type Category = "React" | "TypeScript" | "GraphQL" | "Firebase";

@@ -1,7 +1,7 @@
 import { BsCircleFill } from "react-icons/bs";
-import { Skills } from "./types";
+import { Skill } from "./types";
 
-export const languages: Skills[] = [
+export const languages: Skill[] = [
   {
     Icon: BsCircleFill,
     name: "TypeScript",
@@ -34,7 +34,7 @@ export const languages: Skills[] = [
   },
 ];
 
-export const tools: Skills[] = [
+export const tools: Skill[] = [
   {
     Icon: BsCircleFill,
     name: "JQuery",

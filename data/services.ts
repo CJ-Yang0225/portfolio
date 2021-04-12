@@ -2,9 +2,9 @@ import { RiComputerLine } from "react-icons/ri";
 import { FaServer } from "react-icons/fa";
 import { AiOutlineAntDesign, AiOutlineApi } from "react-icons/ai";
 import { MdDeveloperMode } from "react-icons/md";
-import { Services } from "./types";
+import { Service } from "./types";
 
-export const services: Services[] = [
+export const services: Service[] = [
   {
     Icon: RiComputerLine,
     title: "Frontend Development",

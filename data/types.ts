@@ -1,25 +1,25 @@
 import { IconType } from "react-icons/lib";
 
-export type Services = {
+export type Service = {
   Icon: IconType;
   title: string;
   about: string;
 };
 
-export type Skills = {
+export type Skill = {
   Icon: IconType;
   name: string;
   level: string;
 };
 
-export type Projects = {
+export type Project = {
   name: string;
   description: string;
-  image_path: string;
-  github_url: string;
-  deployed_url: string;
+  imagePath: string;
+  githubUrl: string;
+  deployedUrl: string;
   category: Category[];
-  key_techs: string[];
+  keyTechs: string[];
 };
 
 export type Category = "React" | "TypeScript" | "GraphQL" | "Firebase";

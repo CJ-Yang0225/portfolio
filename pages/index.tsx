@@ -2,12 +2,13 @@ import {
   GetServerSideProps,
   GetServerSidePropsContext,
   GetStaticPropsContext,
+  NextPage,
 } from "next";
 import Head from "next/head";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data/services";
 
-const index = (/* { services } */) => {
+const About: NextPage = (/* { services } */) => {
   // console.log("CLIENT", services);
   return (
     <main className="flex flex-col flex-grow px-6 pt-1">
@@ -40,7 +41,7 @@ const index = (/* { services } */) => {
   );
 };
 
-export default index;
+export default About;
 
 /* 每當此頁面(about)刷新時觸發 */
 // export const getServerSideProps = async (

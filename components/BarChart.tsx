@@ -1,7 +1,7 @@
 import React from "react";
-import { Skills } from "../data/types";
+import { Skill } from "../data/types";
 
-const BarChart: React.FC<Skills> = ({ Icon, name, level }) => {
+const BarChart: React.FC<Skill> = ({ Icon, name, level }) => {
   return (
     <div className="my-2 text-white bg-gray-300 rounded-full dark:bg-dark-300">
       <div

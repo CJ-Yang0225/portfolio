@@ -1,8 +1,8 @@
 import React from "react";
-import { Services } from "../data/types";
+import { Service } from "../data/types";
 
 type Props = {
-  service: Services;
+  service: Service;
 };
 
 const ServiceCard: React.FC<Props> = ({ service: { Icon, title, about } }) => {

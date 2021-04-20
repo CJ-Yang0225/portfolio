@@ -34,7 +34,7 @@ const Resume = () => {
         <article>
           <h5 className="my-2 text-2xl font-bold">Languages</h5>
           {languages.map(({ Icon, name, level }) => (
-            <BarChart Icon={Icon} name={name} level={level} />
+            <BarChart Icon={Icon} name={name} level={level} key={name}/>
           ))}
         </article>
         <article>

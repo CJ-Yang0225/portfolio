@@ -12,7 +12,7 @@ const About: NextPage = (/* { services } */) => {
   // console.log("CLIENT", services);
   return (
     <main className="flex flex-col flex-grow px-6 pt-1">
-      <section className="my-3 text-base font-medium">
+      <section className="my-3 text-lg font-medium">
         我是楊朝傑，我目前是中科大資工系四年級學生，學科成績優異，並熱衷於Front-End
         和 App 開發。
         <br />
@@ -20,7 +20,7 @@ const About: NextPage = (/* { services } */) => {
         研究計畫、實習經驗及自主學習夯實自身程式設計及專案管理的能力，保持自身積極態度不斷累積專業。
       </section>
       <section
-        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100"
+        className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-500"
         style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
       >
         <h4 className="my-3 text-xl font-semibold tracking-wide">
@@ -29,7 +29,7 @@ const About: NextPage = (/* { services } */) => {
         <div className="grid gap-6 my-3 md:grid-cols-2">
           {services.map((service) => (
             <article
-              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:dark:bg-dark-300 dark:bg-dark-200 lg:col-span-1"
+              className="col-span-2 p-2 bg-gray-200 rounded-lg dark:dark:bg-dark-300 dark:bg-dark-300 lg:col-span-1"
               key={service.title}
             >
               <ServiceCard service={service} />
